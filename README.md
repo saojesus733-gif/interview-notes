@@ -1,5 +1,13 @@
 # 面试八股文知识库
 
+## 🌐 在线阅读地址（点这个）
+
+> ## [https://saojesus733-gif.github.io/interview-notes/](https://saojesus733-gif.github.io/interview-notes/)
+
+手机、平板、任何电脑都能打开。每台设备各自记录掌握度（存浏览器本地，互不相通）。
+
+---
+
 基于 VitePress 的个人面试知识库：八股文整理 + 真实面经 + 全文搜索 + 随机抽题 + 掌握度标记。纯静态，无后端。
 
 ## 使用
