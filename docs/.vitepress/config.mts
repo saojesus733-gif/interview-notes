@@ -63,6 +63,7 @@ export default defineConfig({
       },
       { text: '面经', link: '/interview/' },
       { text: '项目准备', link: '/my-prep/' },
+      { text: '名词解释', link: '/glossary' },
       { text: '抓面经', link: '/scrape/' },
       { text: '随机刷题', link: '/random' },
       { text: '错题本', link: '/review' },
