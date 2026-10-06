@@ -1,0 +1,116 @@
+/* 阅读优先：浅色文档风 + 深色代码块 */
+
+:root {
+  --vp-font-family-base: 'Inter', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  /* 浅色主题微调 */
+  --vp-c-brand-1: #2563eb;
+  --vp-c-brand-2: #3b82f6;
+  --vp-c-brand-3: #60a5fa;
+  --vp-c-brand-soft: rgba(37, 99, 235, 0.14);
+  --vp-sidebar-bg-color: #fafafa;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #2563eb, #7c3aed);
+}
+
+/* 深色代码块保持默认 github-dark，不受浅色页面影响 */
+.dark {
+  --vp-c-brand-1: #60a5fa;
+  --vp-c-brand-2: #3b82f6;
+  --vp-sidebar-bg-color: #1b1b1f;
+}
+
+/* 正文阅读宽度 */
+.VPDoc:not(.has-sidebar) .container {
+  max-width: 920px;
+}
+
+/* 标签小徽章 */
+.tag-chip {
+  display: inline-block;
+  padding: 2px 10px;
+  margin: 0 6px 6px 0;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 18px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+}
+.tag-chip:hover {
+  color: var(--vp-c-brand-2);
+}
+
+/* ---------- 通用组件卡片样式 ---------- */
+.iq-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+  background: var(--vp-c-bg);
+}
+.iq-muted {
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+}
+.iq-btn {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.iq-btn:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+.iq-btn.primary {
+  background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+  color: #fff;
+}
+.iq-btn.primary:hover {
+  background: var(--vp-c-brand-2);
+  color: #fff;
+}
+.iq-btn.active {
+  background: var(--vp-c-brand-soft);
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+/* 进度条 */
+.iq-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  overflow: hidden;
+  display: flex;
+}
+.iq-bar > span {
+  display: block;
+  height: 100%;
+}
+.iq-bar .seg-mastered { background: #22c55e; }
+.iq-bar .seg-fuzzy { background: #f59e0b; }
+.iq-bar .seg-unmastered { background: #ef4444; }
+
+/* 掌握度徽章颜色 */
+.mastery-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.mastery-badge.mastered { background: rgba(34, 197, 94, 0.15); color: #16a34a; }
+.mastery-badge.fuzzy { background: rgba(245, 158, 11, 0.15); color: #d97706; }
+.mastery-badge.unmastered { background: rgba(239, 68, 68, 0.15); color: #dc2626; }
+.mastery-badge.unset { background: var(--vp-c-bg-soft); color: var(--vp-c-text-2); }
