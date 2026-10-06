@@ -32,6 +32,8 @@ jobs:
       - run: npm run build
 
       - uses: actions/configure-pages@v4
+        with:
+          enablement: true # 自动启用 Pages，免去手动设置
 
       - uses: actions/upload-pages-artifact@v3
         with:
